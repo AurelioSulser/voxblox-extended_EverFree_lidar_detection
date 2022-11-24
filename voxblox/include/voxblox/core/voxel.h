@@ -22,12 +22,13 @@ struct TsdfVoxel {
 
   bool ever_free = false;
   int curr_occupied = -1;
-  int last_occupied = 0;
+  int last_static = 0;
 
   int occ_counter = 0;
   
+  
   bool clustering_processed = false;
-  bool moving_points = false;
+  bool moving = false;
 };
 
 struct EsdfVoxel {
@@ -48,7 +49,6 @@ struct EsdfVoxel {
   int occ_counter = 0;
   
   bool processed = false;
-  bool moving_points = false;
   
 
   /**
